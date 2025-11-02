@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="hangman.js"></script>
-    <link rel="stylesheet" href="hangman.css">
+    <link rel="stylesheet" href="hangman.css"></links>
 </head>
 <body>
     <div>
-        <img src="images/hangman0.gif" alt="Hangman">
-        <div>id="clue"> Press New Game to play!</div>
+        <img id='hangmanImage' src="images/hangman0.gif" alt="Hangman">
+        <div id="clue"> Press New Game to play!</div>
 
     </div>
 
-    <div><input type="text" size="1" maxlength="1">
-        <button onclick="guess();">Guess</button> </div>
+    <div>
+        <input type="text" size="1" maxlength="1">
+        <button onclick="guessLetter();">Guess</button>
+     </div>
+
 
         <div id = "guesses"> </div>
 
