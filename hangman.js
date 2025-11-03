@@ -16,6 +16,13 @@ function guessLetter() {
 
     var input = document.getElementById("guess");
     var letter = input.value;
+
+    if(word === ''){
+        alert('Start Game');
+        input.value= '';
+        return;
+    }
+
     if(word.indexOf(letter)< 0)
     {
         guess_count--;
