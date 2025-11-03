@@ -1,0 +1,39 @@
+
+//Bullet point 4
+if(word === ''){
+        alert('Start Game');
+        input.value= '';
+        return;
+    }
+
+//Bullet point 5
+if(guesses.includes(letter)){
+    alert('Letter has already been guessed');
+    input.value= '';
+    return;
+}
+
+//Bulletpoint 2
+if(word === ''){
+    alert('Start Game');
+    input.value= '';
+    return;
+}
+
+
+//Bullet point 1
+if(!clueString.includes('_')){
+    alert('Good Job. Your word was'+ word);
+    word= '';
+}
+if(guess_count <=0){
+    alert('Sorry, the word was actually'+ word);
+    word= '';
+}
+
+
+//bulletpoint 3
+
+input.value = "";
+
+

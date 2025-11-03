@@ -16,6 +16,18 @@ function guessLetter() {
 
     var input = document.getElementById("guess");
     var letter = input.value;
+//Cannot guess before game begins
+    if(word === ''){
+        alert('Start Game');
+        input.value= '';
+        return;
+    }
+//Duplicate letters cannot be used
+    if(guesses.includes(letter)){
+        alert('Letter has already been guessed');
+        input.value= '';
+        return;
+    }
     if(word.indexOf(letter)< 0)
     {
         guess_count--;
@@ -35,7 +47,7 @@ function updatePage() {
         } else {
             clueString += " ";
         }
-           
+
         }
          var clue = document.getElementById("clue");
     clue.innerHTML = clueString;
@@ -47,11 +59,11 @@ function updatePage() {
  Image.src = 'images/hangman' + guess_count + '.gif';
 
     if(!clueString.includes('_')){
-    alert('Good Job. Your word was '+ word);
+    alert('Good Job. Your word was'+ word);
     word= '';
     }
     if(guess_count <=0){
-    alert('Sorry, the word was actually '+ word);
+    alert('Sorry, the word was actually'+ word);
     word= '';
      }
 
