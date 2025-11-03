@@ -23,7 +23,7 @@ function guessLetter() {
         return;
     }
 
-    if(guesses.include (letter)){
+    if(guesses.includes(letter)){
         alert('Letter has been guessed already');
         input.value= '';
         return;
