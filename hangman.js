@@ -42,16 +42,16 @@ function guessLetter() {
 
 function updatePage() {
     var clueString = "";
-     for (var i = 0; i < word.length; i++) {
-        clueString += "_ ";
+
+    for (var i = 0; i < word.length; i++) {
         var currentLetter = word.charAt(i);
         if(guesses.indexOf(currentLetter) >= 0){
             clueString += currentLetter + " ";
         } else {
-            clueString += " ";
+            clueString += "_ ";
         }
-           
-        }
+        
+    }
          var clue = document.getElementById("clue");
     clue.innerHTML = clueString;
 
