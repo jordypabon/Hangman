@@ -23,6 +23,12 @@ function guessLetter() {
         return;
     }
 
+    if(guesses.include (letter)){
+        alert('Letter has been guessed already');
+        input.value= '';
+        return;
+    }
+
     if(word.indexOf(letter)< 0)
     {
         guess_count--;
